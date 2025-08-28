@@ -268,3 +268,9 @@ document.getElementById('call-button-6').addEventListener('click', function () {
         callContainer.appendChild(div)
     }
 })
+
+// clear button
+document.getElementById('clear-button').addEventListener('click', function () {
+    document.getElementById('call-container').innerHTML = ''
+    callHistory.length = 0
+})
