@@ -6,6 +6,12 @@ function getInnerText(id) {
     return innerText
 }
 
+// function for copy number
+function copyToClipboard(id){
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text);
+}
+
 
 // heart icon increase
 document.getElementById('heart-button-1').addEventListener('click', function () {
@@ -273,4 +279,54 @@ document.getElementById('call-button-6').addEventListener('click', function () {
 document.getElementById('clear-button').addEventListener('click', function () {
     document.getElementById('call-container').innerHTML = ''
     callHistory.length = 0
+})
+
+// challenges part copy button
+document.getElementById('copy-button-1').addEventListener('click', function() {
+    alert('999 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('national-emergency-number')
+})
+document.getElementById('copy-button-2').addEventListener('click', function() {
+    alert('999 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('police-number')
+})
+document.getElementById('copy-button-3').addEventListener('click', function() {
+    alert('999 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('fire-service-number')
+})
+document.getElementById('copy-button-4').addEventListener('click', function() {
+    alert('1994-999999 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('ambulance-number')
+})
+document.getElementById('copy-button-5').addEventListener('click', function() {
+    alert('109 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('women-child-number')
+})
+document.getElementById('copy-button-6').addEventListener('click', function() {
+    alert('106 copied to clipboard')
+
+    const copyCount = parseInt(getInnerText('copy-count'))
+    document.getElementById('copy-count').innerText = copyCount + 1
+
+    copyToClipboard('anti-corruption-number')
 })
